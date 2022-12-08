@@ -145,7 +145,7 @@ const submitForm = (data) =>{
                 <form  onSubmit={handleSubmit(submitForm)} className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div className='col-span-2 lg:md:col-span-1'>
                     <label htmlFor="first-name" className="block text-sm font-medium text-[#5E6E83E5]">
-                      Fullname
+                      Firstname
                     </label>
                     <div className="mt-1">
                     <input
@@ -156,12 +156,30 @@ const submitForm = (data) =>{
                     className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     {...register("username", {required: true,pattern:/^[A-Z][a-zA-Z]+$/gm}) }
                   />
-                  <p className='text-red-600'>{errors.username?.type==="required" && "!Enter your name"}</p>
+                  <p className='text-red-600'>{errors.username?.type==="required" && "!Enter your Firstname"}</p>
                  <p className='text-red-600'>{errors.username?.type==="pattern" && "!Enter a valid username"}</p>
                   
                     </div>
                   </div>
                   <div className='col-span-2 lg:md:col-span-1'>
+                    <label htmlFor="first-name" className="block text-sm font-medium text-[#5E6E83E5]">
+                      Lastname
+                    </label>
+                    <div className="mt-1">
+                    <input
+                    id="Lastname"
+                    name="Lastname"
+                    type="text"
+                    
+                    className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    {...register("Lastname", {required: true,pattern:/^[A-Z][a-zA-Z]+$/gm}) }
+                  />
+                  <p className='text-red-600'>{errors.Lastname?.type==="required" && "!Enter your Lastname"}</p>
+                 <p className='text-red-600'>{errors.Lastname?.type==="pattern" && "!Enter a valid username"}</p>
+                  
+                    </div>
+                  </div>
+                  <div className='"col-span-2 sm:col-span-2'>
                     <label htmlFor="last-name" className="block text-sm font-medium text-[#5E6E83E5]">
                       Email Address
                     </label>
@@ -172,8 +190,8 @@ const submitForm = (data) =>{
                     type="email"
                     className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     {...register("email", {required: true, pattern:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})}
+                    />
                    
-                  />
                  <p className='text-red-600'>{errors.email?.type==="required" && "!Enter a gmail address"}</p>
                  <p className='text-red-600'>{errors.email?.type==="pattern" && "!Enter a valid Gmail address"}</p>
                     </div>
