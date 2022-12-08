@@ -19,10 +19,9 @@ export default function Form() {
 
               <div className=" mt-6 ml-6 md:w-[35rem]">
                 <h1
-                  className="font-bold text-3xl text-[#67327E]
-              "
-                >
-                  <a>SIGN IN</a>
+                  className="font-bold text-3xl text-[#67327E]">
+                
+                  <Link to="/">SIGN IN</Link>
                 </h1>
                 <form action="#" method="POST" className="space-y-5 ">
                   <div className="space-y-2">
